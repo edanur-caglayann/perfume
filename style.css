@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+div,
+img,
+section,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    /* alt zemin krem */
+    background-color: var(--Cream);
+    /* renkler koyu mavi */
+    color: var(--Very-dark-blue);
+    
+   display: flex;
+   /* yazıyı ekranda yatay olarak ortaladık */
+   justify-content: center;
+    /* yazıyı ekranda dikey olarak ortaladık */
+   align-items: center;
+   margin: 0 auto;
+}
+.product{
+    display: flex;
+    height: 550px;
+   justify-content: center;
+    margin: 140px auto;
+}
+.img{
+    background-image: url("./images/image-product-desktop.jpg");
+    width: 400px;
+    /* görüntü sığacak şekilde ayarlamak */
+    /*object-fit-->  öğenin içerik kutusunun yüksekliğine 
+    ve genişliğine nasıl tepki verdiğini tanımlar */
+    object-fit: fill;
+    /* Arka plan resminin tekrarlı mı yoksa tekrarsız mı 
+    ekleneceğini belirlemek için kullanılır. */
+   background-repeat: no-repeat;
+   /*  Arka plan resminin alanı nasıl 
+   kaplayacağını belirlemek için kullanılır.
+   cover--> */
+   background-size: cover;
+   /* kenarları ovalleştirme--> sol üst köşeden başlar */
+   border-radius: 10px 0px 0px 10px;
+}
+.detail{
+    display: flex;
+    /* en bştaki ve en sondakini uçlara atıp 
+    aradakileri eşit şekilde dağıtıyor */
+    justify-content:space-between;
+    /* kutuları alt alta sıraladık */
+    flex-direction: column;
+    /* kenarları ovalleştirdik */
+    border-radius: 0px 10px 10px 0px;
+    background-color: var(--White);
+    /* beyaz alanın yüksekliği ve genişliği */
+    padding: 50px 25px;
+    width: 400px;
+    height: 20px 40px;
+}
+.detail .title{
+    color: var(--Dark-grayish-blue);
+    /* fontun kalınlık incelik durumu */
+    font-weight: 400px;
+    /* harfler arası mesafe */
+    letter-spacing: 4px;
+    /* tüm harfleri büyük harf yapmak */
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 20px 0px;
+}
+.detail .big-title{
+    font-family:"Fraunces", Times, serif;
+    font-weight: 800px;
+    font-size: 36px;
+    /* içeriğin aşağısında boşluk bırakır */
+    padding-bottom: 20px;
+}
+.detail .description {
+    /* metnin boyutunu ayarlar */
+    font-size: 16px;
+    /* satır aralıklarını belirler */
+    line-height: 1.5;
+    padding-bottom: 20px;
+    color: var(--Dark-grayish-blue);
+}
+.detail .price{
+    font-size: 36px;
+    font-family: "Fraunces", Times, serif;
+    font-weight: 700;
+    color: var(--Dark-cyan);
+    padding-bottom: 20px;
+    /* sayfa içinde elemanların konumunu belirler.*/
+    position: relative;
+}
+.detail .price span {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 20px;
+    position: absolute;
+    top: 10px;
+    /* yazının üstünü çizer */
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Dark-cyan);
+    border-radius: 8px;
+    height: 50px;
+}
+button img{
+    border-radius: 0;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+button span{
+    font-family:"Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--White);
+    padding-left: 4px;
+}
+
+
+
+
